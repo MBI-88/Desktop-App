@@ -156,7 +156,6 @@ class FilterGUI():
 
     def credict(self):
         return messagebox.showinfo('', message="""
-        Copyright ©
         Creado: 3/8/2021
         Auto: MBI
         Licencia: Software de codigo abierto
