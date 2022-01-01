@@ -102,7 +102,7 @@ class FilterGUI():
     
         self.scala = tk.StringVar()
         self.scala.set('Hz')
-        selectedScala = ttk.Combobox(subwin_2, textvariable=self.scala,width=5,value=['Hz','MHz','GHz'])
+        selectedScala = ttk.Combobox(subwin_2, textvariable=self.scala,width=5,value=['Hz','KHz','MHz','GHz'])
         selectedScala.grid(column=1,row=0,sticky='W',pady=2)
         Tooltip(selectedScala,'Escala de frecuencia')
         
@@ -166,7 +166,7 @@ class FilterGUI():
         
     def operations(self):
         # Filtrado de variables
-        dictScala = {"Hz": 1,"MHz": 1e3,"GHz": 1e6}
+        dictScala = {"Hz": 1,"KHz": 1e3,"MHz": 1e6,'GHz': 1e9}
         try:
             if (self.freq.get() == '0' or self.freqAngularAten.get() == '0' or self.freqAngularCorte.get() == '0'
                         or self.atenuation_0.get() == '0' or self.atenuation_1.get() == '0'):
